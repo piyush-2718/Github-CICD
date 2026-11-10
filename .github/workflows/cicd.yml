@@ -1,0 +1,22 @@
+name: CICD Workflow
+
+on:
+  push: 
+  workflow_dispatch: 
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: code checkout
+      uses: actions/checkout@v7
+
+    - name: build
+      run: echo "code is building"
+
+    - name: test
+      run: echo "Testing Code"
+
+    - name: deploy
+      run: echo "Deploy Code"
