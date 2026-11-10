@@ -5,18 +5,26 @@ on:
   workflow_dispatch: 
 
 jobs:
-  server:
+  code:
     runs-on: ubuntu-latest
-
     steps:
     - name: code checkout
       uses: actions/checkout@v7
 
+  build:
+    runs-on: ubuntu-latest
+    steps:
     - name: build
       run: echo "code is building"
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
     - name: test
       run: echo "Testing Code"
-
+      
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
     - name: deploy
       run: echo "Deploy Code"
