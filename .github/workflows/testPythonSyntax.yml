@@ -5,14 +5,12 @@ on:
   push:
     paths: "*.py"
  
-
-    
 jobs:
   checking-python-syn-error:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: acitons/checkout@v7
+        uses: acitons/checkout@v4
   
       - name: Set up Python
         uses: actions/setup-python@v5 
