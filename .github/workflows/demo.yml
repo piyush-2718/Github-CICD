@@ -6,14 +6,13 @@ on:
 jobs:
   Code:
     runs-on: ubuntu-latest
-      
+    needs: Deploy
     steps:
     - name: Checkout code
       run: echo "checking Code"
 
   Build:
     runs-on: ubuntu-latest
-    needs: Code
     steps:
     - name: Building Code using Docker 
       run: echo "Build Code using Docker"
